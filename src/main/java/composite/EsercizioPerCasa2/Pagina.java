@@ -1,6 +1,6 @@
 package composite.EsercizioPerCasa2;
 
-public class Pagina implements LibroInterface{
+public class Pagina implements Elemento {
 
     private int numero;
 

@@ -8,7 +8,7 @@ public class MainEs1 {
         Info persona=new Info("Mario", "Rossi", new Date(95, 1, 12)); // Anno, Mese (0-based), Giorno
 
 
-        DataSource adapter= new InfoAdapter(persona);
+        InfoAdapter adapter= new InfoAdapter(persona);
 
         System.out.println(adapter.getNomeCompleto());
         System.out.println(adapter.getEta());

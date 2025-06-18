@@ -3,12 +3,12 @@ package composite.EsercizioPerCasa2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Libro implements LibroInterface{
+public class Libro implements Elemento {
 
     private String titolo;
     private List<String> autori;
     private double prezzo;
-    private List<LibroInterface> listaComponenti= new ArrayList<>();
+    private List<Elemento> listaComponenti= new ArrayList<>();
 
     public Libro(String titolo, double prezzo, List<String> autori) {
         this.titolo = titolo;
@@ -41,11 +41,11 @@ public class Libro implements LibroInterface{
         this.prezzo = prezzo;
     }
 
-    public List<LibroInterface> getListaComponenti() {
+    public List<Elemento> getListaComponenti() {
         return listaComponenti;
     }
 
-    public void setListaComponenti(List<LibroInterface> listaComponenti) {
+    public void setListaComponenti(List<Elemento> listaComponenti) {
         this.listaComponenti = listaComponenti;
     }
 
@@ -56,7 +56,7 @@ public class Libro implements LibroInterface{
         System.out.println("Autori: " + String.join(", ", autori));
         System.out.println("Prezzo: " + prezzo + " €");
         System.out.println("Contenuto:");
-        for (LibroInterface c : listaComponenti) {
+        for (Elemento c : listaComponenti) {
             c.stampa();
         }
     }
@@ -64,13 +64,13 @@ public class Libro implements LibroInterface{
     @Override
     public int getNumeroPagine() {
         int totale=0;
-        for (LibroInterface c:listaComponenti){
+        for (Elemento c:listaComponenti){
             totale+=c.getNumeroPagine();
         }
         return totale;
     }
 
-    public void add(LibroInterface libro) {
+    public void add(Elemento libro) {
         listaComponenti.add(libro);
     }
 }

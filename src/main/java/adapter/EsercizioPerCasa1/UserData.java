@@ -26,4 +26,9 @@ public class UserData implements DataSource{
     public int getEta() {
         return eta;
     }
+
+//    public getData(DataSource dataSource){
+//        nomeCompleto= dataSource.getNomeCompleto();
+//        eta= dataSource.getEta();
+//    }
 }

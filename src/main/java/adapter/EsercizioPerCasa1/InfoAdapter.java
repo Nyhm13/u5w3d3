@@ -30,4 +30,10 @@ public class InfoAdapter implements DataSource{
 
         return eta;
     }
+
+//    @Override
+//    public int getEta() {
+//       return (int)((new Date().getTime()-info.getDataNascita().getTime())/
+//                (1000L * 60 * 60 * 24 * 365.25));
+//    }
 }
